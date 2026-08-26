@@ -1,0 +1,38 @@
+{
+  "text": "My mind rebels at stagnation.",
+  "score": 100.0,
+  "segment_start": 25.28,
+  "segment_end": 27.66,
+  "words": [
+    {
+      "word": " My",
+      "start": 25.28,
+      "end": 25.46,
+      "probability": 0.9677234292030334
+    },
+    {
+      "word": " mind",
+      "start": 25.46,
+      "end": 25.8,
+      "probability": 0.986771285533905
+    },
+    {
+      "word": " rebels",
+      "start": 25.8,
+      "end": 26.44,
+      "probability": 0.45465198159217834
+    },
+    {
+      "word": " at",
+      "start": 26.44,
+      "end": 26.94,
+      "probability": 0.6049511432647705
+    },
+    {
+      "word": " stagnation.",
+      "start": 26.94,
+      "end": 27.66,
+      "probability": 0.9829808473587036
+    }
+  ]
+}
