@@ -1,13 +1,8 @@
-Yep — you want the **entire `README.md` in one copy-pasteable code block**, so the Markdown formatting stays intact when you paste it into the file.
-
-````markdown
 # Quest1 — Exact Dialogue Frame Detection
 
-An automated video analysis system that identifies the **first video frame in which a specified dialogue appears**.
+> **An automated video analysis system that identifies the first video frame in which a specified dialogue appears.**
 
-Given a publicly accessible video or a local video file and a target dialogue, the system processes the video, transcribes its audio, locates the matching dialogue, refines the timestamp, and extracts the corresponding video frame.
-
----
+**Given a publicly accessible video or a local video file and a target dialogue, the system processes the video, transcribes its audio, locates the matching dialogue, refines the timestamp, and extracts the corresponding video frame.**
 
 ## Problem Statement
 
