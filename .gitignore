@@ -16,3 +16,13 @@ data/samples/*
 !data/outputs/.gitkeep
 !data/samples/.gitkeep
 *.log
+
+# Local ASR test outputs
+asr_test.*
+
+# Local AI models
+models/
+
+# Generated video/audio samples
+data/input/*
+data/samples/*
