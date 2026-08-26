@@ -26,3 +26,4 @@ models/
 # Generated video/audio samples
 data/input/*
 data/samples/*
+data/output/*
