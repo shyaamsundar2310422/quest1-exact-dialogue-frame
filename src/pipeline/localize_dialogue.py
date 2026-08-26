@@ -5,11 +5,17 @@ import subprocess
 
 import cv2
 import whisper
+import streamlit as st
 
 from src.matching.text_matcher import find_dialogue
 from src.search.fine_search import refine_speech_onset
 
+
 from src.confidence.scorer import calculate_confidence
+@st.cache_resource
+def load_whisper_model(model_path):
+    return whisper.load_model(model_path)
+
 def extract_audio(video_path, audio_path):
     os.makedirs(
         os.path.dirname(audio_path),
@@ -37,10 +43,11 @@ def extract_audio(video_path, audio_path):
     )
 
 
+
 def transcribe(audio_path, model_path):
     print("Loading Whisper model...")
 
-    model = whisper.load_model(model_path)
+    model = load_whisper_model(model_path)
 
     print("Transcribing audio...")
 
@@ -51,7 +58,6 @@ def transcribe(audio_path, model_path):
     )
 
     return result
-
 
 def extract_frame(video_path, timestamp, output_path):
     cap = cv2.VideoCapture(video_path)
