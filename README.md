@@ -88,7 +88,9 @@ The corresponding frame is written to:
 ```text
 data/output/exact_dialogue_frame.jpg
 ```
+### Localization Output
 
+![Localization Result](assets/localization_result.png)
 ---
 
 ## Project Structure
