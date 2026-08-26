@@ -9,7 +9,7 @@ import whisper
 from src.matching.text_matcher import find_dialogue
 from src.search.fine_search import refine_speech_onset
 
-
+from src.confidence.scorer import calculate_confidence
 def extract_audio(video_path, audio_path):
     os.makedirs(
         os.path.dirname(audio_path),
@@ -227,6 +227,15 @@ def main():
         refined_time,
         frame_path
     )
+    confidence = calculate_confidence(
+    	match["score"],
+    	candidate_time,
+    	refined_time
+    )
+
+    print(
+    	f"Confidence: {confidence:.2f}%"
+	)
 
     result_data = {
         "target": args.target,
@@ -238,6 +247,7 @@ def main():
         "frame_timestamp": frame_number / fps,
         "fps": fps,
         "frame_path": frame_path,
+        "confidence": confidence,
     }
 
     with open(
